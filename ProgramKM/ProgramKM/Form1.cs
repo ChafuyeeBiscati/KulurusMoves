@@ -18,13 +18,14 @@ namespace ProgramKM
         Random xspeed = new Random();
         Kuluru kuluru = new Kuluru();
         bool left, right;//Makes the use of the left and right boolean in the method code
-        bool up, down;//Makes the use of the up and down boolean in the method code
+        bool up, down;//Makes the use of the up and down boolean in the method code\
+        int score, lives;
         string move;
 
         public KMForm()
         {
             InitializeComponent();
-            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, KMPanel, new object[] { true });
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, KMPanel1, new object[] { true });
             for (int i = 0; i < 7; i++)
             {
                 int y = 10 + (i * 50);
@@ -35,6 +36,11 @@ namespace ProgramKM
 
         private void KMForm_Load(object sender, EventArgs e)
         {
+            KMPanel1.Visible = false;
+            KMPanel2.Visible = false;
+            lives = int.Parse(TxtLives.Text);// pass lives entered from textbox to lives variable
+            MessageBox.Show("Use the left and right arrow keys to move the spaceship. \n Don't get hit by the planets! \n Every planet that gets past scores a point. \n If a planet hits a spaceship a life is lost! \n \n Enter your Name press tab and enter the number of lives \n Click Start to begin", "Game Instructions");
+            TxtName.Focus();
 
         }
 
@@ -96,6 +102,16 @@ namespace ProgramKM
 
         }
 
+        private void BtnStart_Click(object sender, EventArgs e)
+        {
+            score = 0;
+            lblScore.Text = score.ToString();
+            lives = int.Parse(TxtLives.Text);// pass lives entered from textbox to lives variable
+            tmrEnemy.Enabled = true;
+            tmrKrool.Enabled = true;
+
+        }
+
         private void KMForm_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left) { left = false; }
@@ -110,9 +126,34 @@ namespace ProgramKM
             for (int i = 0; i < 7; i++)
             {
                 seagull[i].moveEnemy();
+                if (kuluru.kroolRec.IntersectsWith(seagull[i].enemyRec))
+                {
+                    //reset planet[i] back to top of panel
+                    seagull[i].x = 20; // set  y value of planetRec
+                    lives -= 1;// lose a life
+                    TxtLives.Text = lives.ToString();// display number of lives
+                    checkLives();
+                }
+
+
+                score += seagull[i].score;// get score from Planet class (in movePlanet method)
+                lblScore.Text = score.ToString();// display score
+
             }
-            KMPanel.Invalidate();//makes the paint event fire to redraw the panel
+            KMPanel1.Invalidate();//makes the paint event fire to redraw the panel
+
         }
+        private void checkLives()
+        {
+            if (lives == 0)
+            {
+                tmrEnemy.Enabled = false;
+                tmrKrool.Enabled = false;
+                MessageBox.Show("Game Over");
+
+            }
+        }
+
 
     }
 }

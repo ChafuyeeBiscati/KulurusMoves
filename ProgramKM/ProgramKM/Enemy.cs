@@ -37,6 +37,7 @@ namespace ProgramKM
             {
                 x = 20;
                 enemyRec.Location = new Point(x, y);
+                score += 1;// add 1 to score when planet reaches bottom of panel
             }
 
         }
