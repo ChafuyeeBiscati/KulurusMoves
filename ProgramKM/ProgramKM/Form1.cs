@@ -38,9 +38,13 @@ namespace ProgramKM
         {
             KMPanel1.Visible = false;
             KMPanel2.Visible = false;
+            KMPanel3.Visible = false;
+            KMPanel4.Visible = false;
             lives = int.Parse(TxtLives.Text);// pass lives entered from textbox to lives variable
             MessageBox.Show("Use the left and right arrow keys to move the spaceship. \n Don't get hit by the planets! \n Every planet that gets past scores a point. \n If a planet hits a spaceship a life is lost! \n \n Enter your Name press tab and enter the number of lives \n Click Start to begin", "Game Instructions");
             TxtName.Focus();
+            tmrEnemy.Enabled = false;
+            tmrKrool.Enabled = false;
 
         }
 
@@ -48,6 +52,7 @@ namespace ProgramKM
         {
 
         }
+
 
         private void KMPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -67,6 +72,7 @@ namespace ProgramKM
 ;
 
         }
+
 
         private void tmrKrool_Tick(object sender, EventArgs e)
         {
@@ -109,6 +115,34 @@ namespace ProgramKM
             lives = int.Parse(TxtLives.Text);// pass lives entered from textbox to lives variable
             tmrEnemy.Enabled = true;
             tmrKrool.Enabled = true;
+
+        }
+
+        private void KMLevel1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Kuluru begins his journey on the ship of King Krool. \n To reach DK Island Kuluru must make it past the enslaught of seagulls. \n Your goal is to use the movement of Kuluru to dodge as many seagulls as you can.");
+            KMPanel1.Visible = true;
+            tmrEnemy.Enabled = true;
+            tmrKrool.Enabled = true;
+        }
+
+        private void KMLevel2_Click(object sender, EventArgs e)
+        {
+            KMPanel2.Visible = true;
+        }
+
+        private void KMLevel3_Click(object sender, EventArgs e)
+        {
+            KMPanel3.Visible = true;
+        }
+
+        private void KMLevel4_Click(object sender, EventArgs e)
+        {
+            KMPanel4.Visible = true;
+        }
+
+        private void KMPanel2_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 

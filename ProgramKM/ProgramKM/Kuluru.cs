@@ -21,9 +21,9 @@ namespace ProgramKM
         {
             x = 600;
             y = 150;
-            width = 66;
-            height = 66;
-            kuluru = Image.FromFile("Idle.png");
+            width = 50;
+            height = 50;
+            kuluru = Image.FromFile("lizard.png");
             kroolRec = new Rectangle(x, y, width, height);
         }
         public void drawKuluru(Graphics g)
@@ -55,6 +55,7 @@ namespace ProgramKM
             {
                 if (kroolRec.Location.X < 0) // is spaceship within 10 of left side
                 {
+                    x = 0;
                     kroolRec.Location = new Point(x, y);
                 }
                 else
@@ -68,6 +69,7 @@ namespace ProgramKM
                 {
                     if (kroolRec.Location.Y < 0) // is spaceship within 10 of left side
                     {
+                        y = 0;
                         kroolRec.Location = new Point(x, y);
                     }
                     else

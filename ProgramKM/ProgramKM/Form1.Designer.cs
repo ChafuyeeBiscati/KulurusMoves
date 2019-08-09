@@ -54,6 +54,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.KMPanel3 = new System.Windows.Forms.Panel();
+            this.KMPanel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.LblLives)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BGLives)).BeginInit();
@@ -90,7 +92,7 @@
             // 
             this.TxtLevel.AutoSize = true;
             this.TxtLevel.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtLevel.Location = new System.Drawing.Point(80, 35);
+            this.TxtLevel.Location = new System.Drawing.Point(84, 35);
             this.TxtLevel.Name = "TxtLevel";
             this.TxtLevel.Size = new System.Drawing.Size(48, 55);
             this.TxtLevel.TabIndex = 2;
@@ -110,9 +112,9 @@
             // 
             this.KMPanel1.BackgroundImage = global::ProgramKM.Properties.Resources.Ship_1;
             this.KMPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.KMPanel1.Location = new System.Drawing.Point(55, 134);
+            this.KMPanel1.Location = new System.Drawing.Point(53, 134);
             this.KMPanel1.Name = "KMPanel1";
-            this.KMPanel1.Size = new System.Drawing.Size(675, 350);
+            this.KMPanel1.Size = new System.Drawing.Size(673, 350);
             this.KMPanel1.TabIndex = 0;
             this.KMPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.KMPanel_Paint);
             // 
@@ -201,7 +203,7 @@
             this.lblScore.AutoSize = true;
             this.lblScore.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(541, 86);
+            this.lblScore.Location = new System.Drawing.Point(547, 86);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(28, 31);
             this.lblScore.TabIndex = 13;
@@ -210,10 +212,11 @@
             // KMPanel2
             // 
             this.KMPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("KMPanel2.BackgroundImage")));
-            this.KMPanel2.Location = new System.Drawing.Point(54, 134);
+            this.KMPanel2.Location = new System.Drawing.Point(53, 134);
             this.KMPanel2.Name = "KMPanel2";
-            this.KMPanel2.Size = new System.Drawing.Size(675, 350);
+            this.KMPanel2.Size = new System.Drawing.Size(676, 350);
             this.KMPanel2.TabIndex = 14;
+            this.KMPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.KMPanel2_Paint);
             // 
             // label1
             // 
@@ -236,6 +239,7 @@
             this.KMLevel1.TabIndex = 16;
             this.KMLevel1.Text = "Crocodile Cacophony ";
             this.KMLevel1.UseVisualStyleBackColor = true;
+            this.KMLevel1.Click += new System.EventHandler(this.KMLevel1_Click);
             // 
             // KMLevel2
             // 
@@ -246,6 +250,7 @@
             this.KMLevel2.TabIndex = 17;
             this.KMLevel2.Text = "Monkey Madness";
             this.KMLevel2.UseVisualStyleBackColor = true;
+            this.KMLevel2.Click += new System.EventHandler(this.KMLevel2_Click);
             // 
             // KMLevel3
             // 
@@ -256,6 +261,7 @@
             this.KMLevel3.TabIndex = 18;
             this.KMLevel3.Text = "Rat Rumble";
             this.KMLevel3.UseVisualStyleBackColor = true;
+            this.KMLevel3.Click += new System.EventHandler(this.KMLevel3_Click);
             // 
             // KMLevel4
             // 
@@ -266,6 +272,7 @@
             this.KMLevel4.TabIndex = 19;
             this.KMLevel4.Text = "Yeti Confetti";
             this.KMLevel4.UseVisualStyleBackColor = true;
+            this.KMLevel4.Click += new System.EventHandler(this.KMLevel4_Click);
             // 
             // pictureBox2
             // 
@@ -298,33 +305,51 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "Game by Zach Saunders";
             // 
+            // KMPanel3
+            // 
+            this.KMPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("KMPanel3.BackgroundImage")));
+            this.KMPanel3.Location = new System.Drawing.Point(54, 134);
+            this.KMPanel3.Name = "KMPanel3";
+            this.KMPanel3.Size = new System.Drawing.Size(675, 350);
+            this.KMPanel3.TabIndex = 0;
+            // 
+            // KMPanel4
+            // 
+            this.KMPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("KMPanel4.BackgroundImage")));
+            this.KMPanel4.Location = new System.Drawing.Point(54, 134);
+            this.KMPanel4.Name = "KMPanel4";
+            this.KMPanel4.Size = new System.Drawing.Size(679, 350);
+            this.KMPanel4.TabIndex = 23;
+            // 
             // KMForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProgramKM.Properties.Resources.db35qhj_ea72c51d_b0b7_4555_ac33_3592a554fb77;
             this.ClientSize = new System.Drawing.Size(784, 586);
+            this.Controls.Add(this.KMPanel4);
             this.Controls.Add(this.KMPanel1);
+            this.Controls.Add(this.KMPanel3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.KMLevel4);
-            this.Controls.Add(this.KMLevel3);
-            this.Controls.Add(this.KMLevel2);
-            this.Controls.Add(this.KMLevel1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.KMPanel2);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.DspScore);
             this.Controls.Add(this.TxtName);
             this.Controls.Add(this.DspName);
             this.Controls.Add(this.TxtLives);
             this.Controls.Add(this.LblLives);
-            this.Controls.Add(this.TxtLevel);
+            this.Controls.Add(this.BGLives);
+            this.Controls.Add(this.KMPanel2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.LblTitle2);
             this.Controls.Add(this.LblTitle);
+            this.Controls.Add(this.TxtLevel);
+            this.Controls.Add(this.KMLevel1);
+            this.Controls.Add(this.KMLevel2);
+            this.Controls.Add(this.KMLevel3);
+            this.Controls.Add(this.KMLevel4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.BGLives);
             this.Controls.Add(this.BGLevel);
             this.KeyPreview = true;
             this.Name = "KMForm";
@@ -369,6 +394,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel KMPanel3;
+        private System.Windows.Forms.Panel KMPanel4;
     }
 }
 
