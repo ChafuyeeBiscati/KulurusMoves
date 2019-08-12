@@ -14,7 +14,7 @@ namespace ProgramKM
     public partial class KMForm : Form
     {
         Graphics g; //declare a graphics object called g
-        Enemy[] seagull = new Enemy[7];
+        Enemy[] enemy = new Enemy[7];
         Random xspeed = new Random();
         Kuluru kuluru = new Kuluru();
         bool left, right;//Makes the use of the left and right boolean in the method code
@@ -29,7 +29,7 @@ namespace ProgramKM
             for (int i = 0; i < 7; i++)
             {
                 int y = 10 + (i * 50);
-                seagull[i] = new Enemy(y);
+                enemy[i] = new Enemy(y);
             }
 
         }
@@ -37,11 +37,7 @@ namespace ProgramKM
         private void KMForm_Load(object sender, EventArgs e)
         {
             KMPanel1.Visible = false;
-            KMPanel2.Visible = false;
-            KMPanel3.Visible = false;
-            KMPanel4.Visible = false;
             lives = int.Parse(TxtLives.Text);// pass lives entered from textbox to lives variable
-            MessageBox.Show("Use the left and right arrow keys to move the spaceship. \n Don't get hit by the planets! \n Every planet that gets past scores a point. \n If a planet hits a spaceship a life is lost! \n \n Enter your Name press tab and enter the number of lives \n Click Start to begin", "Game Instructions");
             TxtName.Focus();
             tmrEnemy.Enabled = false;
             tmrKrool.Enabled = false;
@@ -64,9 +60,9 @@ namespace ProgramKM
                 //call the Planet class's drawPlanet method to draw the images
                 // generate a random number from 5 to 20 and put it in rndmspeed
                 int rndmspeed = xspeed.Next(5, 15);
-                seagull[i].x += rndmspeed;
+                enemy[i].x += rndmspeed;
 
-                seagull[i].drawEnemy(g);
+                enemy[i].drawEnemy(g);
             }
             kuluru.drawKuluru(g); 
 ;
@@ -120,25 +116,51 @@ namespace ProgramKM
 
         private void KMLevel1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Kuluru begins his journey on the ship of King Krool. \n To reach DK Island Kuluru must make it past the enslaught of seagulls. \n Your goal is to use the movement of Kuluru to dodge as many seagulls as you can.");
+            score = 0;
+            
+            lblScore.Text = score.ToString();
+            lives = int.Parse(TxtLives.Text);// pass lives entered from textbox to lives variable
             KMPanel1.Visible = true;
+            KMPanel1.BackgroundImage = Image.FromFile("Ship_1.png");
+            MessageBox.Show("Kuluru begins his journey on the ship of King Krool.\n To reach DK Island Kuluru must make it past the enslaught of seagulls.\n Your goal is to use the movement of Kuluru to dodge as many seagulls as you can.");
             tmrEnemy.Enabled = true;
             tmrKrool.Enabled = true;
         }
 
         private void KMLevel2_Click(object sender, EventArgs e)
         {
-            KMPanel2.Visible = true;
+            score = 0;
+            lblScore.Text = score.ToString();
+            lives = int.Parse(TxtLives.Text);// pass lives entered from textbox to lives variable
+            KMPanel1.Visible = true;
+            KMPanel1.BackgroundImage = Image.FromFile("Jungle_1.png");
+            MessageBox.Show("");
+            tmrEnemy.Enabled = true;
+            tmrKrool.Enabled = true;
         }
 
         private void KMLevel3_Click(object sender, EventArgs e)
         {
-            KMPanel3.Visible = true;
+            score = 0;
+            lblScore.Text = score.ToString();
+            lives = int.Parse(TxtLives.Text);// pass lives entered from textbox to lives variable
+            KMPanel1.Visible = true;
+            KMPanel1.BackgroundImage = Image.FromFile("Cave_1.png");
+            MessageBox.Show("");
+            tmrEnemy.Enabled = true;
+            tmrKrool.Enabled = true;
         }
 
         private void KMLevel4_Click(object sender, EventArgs e)
         {
-            KMPanel4.Visible = true;
+            score = 0;
+            lblScore.Text = score.ToString();
+            lives = int.Parse(TxtLives.Text);// pass lives entered from textbox to lives variable
+            KMPanel1.Visible = true;
+            KMPanel1.BackgroundImage = Image.FromFile("Mount_1.png");
+            MessageBox.Show("");
+            tmrEnemy.Enabled = true;
+            tmrKrool.Enabled = true;
         }
 
         private void KMPanel2_Paint(object sender, PaintEventArgs e)
@@ -159,18 +181,18 @@ namespace ProgramKM
         {
             for (int i = 0; i < 7; i++)
             {
-                seagull[i].moveEnemy();
-                if (kuluru.kroolRec.IntersectsWith(seagull[i].enemyRec))
+                enemy[i].moveEnemy();
+                if (kuluru.kroolRec.IntersectsWith(enemy[i].enemyRec))
                 {
                     //reset planet[i] back to top of panel
-                    seagull[i].x = 20; // set  y value of planetRec
+                    enemy[i].x = 20; // set  y value of planetRec
                     lives -= 1;// lose a life
                     TxtLives.Text = lives.ToString();// display number of lives
                     checkLives();
                 }
 
 
-                score += seagull[i].score;// get score from Planet class (in movePlanet method)
+                score += enemy[i].score;// get score from Planet class (in movePlanet method)
                 lblScore.Text = score.ToString();// display score
 
             }

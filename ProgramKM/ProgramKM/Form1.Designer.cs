@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KMForm));
             this.LblTitle = new System.Windows.Forms.Label();
             this.LblTitle2 = new System.Windows.Forms.Label();
             this.TxtLevel = new System.Windows.Forms.Label();
             this.LblLives = new System.Windows.Forms.PictureBox();
-            this.KMPanel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TxtLives = new System.Windows.Forms.Label();
             this.BGLives = new System.Windows.Forms.PictureBox();
@@ -45,7 +43,6 @@
             this.tmrEnemy = new System.Windows.Forms.Timer(this.components);
             this.tmrKrool = new System.Windows.Forms.Timer(this.components);
             this.lblScore = new System.Windows.Forms.Label();
-            this.KMPanel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.KMLevel1 = new System.Windows.Forms.Button();
             this.KMLevel2 = new System.Windows.Forms.Button();
@@ -54,8 +51,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.KMPanel3 = new System.Windows.Forms.Panel();
-            this.KMPanel4 = new System.Windows.Forms.Panel();
+            this.KMPanel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.LblLives)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BGLives)).BeginInit();
@@ -107,16 +103,6 @@
             this.LblLives.Size = new System.Drawing.Size(75, 75);
             this.LblLives.TabIndex = 4;
             this.LblLives.TabStop = false;
-            // 
-            // KMPanel1
-            // 
-            this.KMPanel1.BackgroundImage = global::ProgramKM.Properties.Resources.Ship_1;
-            this.KMPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.KMPanel1.Location = new System.Drawing.Point(53, 134);
-            this.KMPanel1.Name = "KMPanel1";
-            this.KMPanel1.Size = new System.Drawing.Size(673, 350);
-            this.KMPanel1.TabIndex = 0;
-            this.KMPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.KMPanel_Paint);
             // 
             // pictureBox1
             // 
@@ -209,15 +195,6 @@
             this.lblScore.TabIndex = 13;
             this.lblScore.Text = "0";
             // 
-            // KMPanel2
-            // 
-            this.KMPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("KMPanel2.BackgroundImage")));
-            this.KMPanel2.Location = new System.Drawing.Point(53, 134);
-            this.KMPanel2.Name = "KMPanel2";
-            this.KMPanel2.Size = new System.Drawing.Size(676, 350);
-            this.KMPanel2.TabIndex = 14;
-            this.KMPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.KMPanel2_Paint);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -305,21 +282,15 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "Game by Zach Saunders";
             // 
-            // KMPanel3
+            // KMPanel1
             // 
-            this.KMPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("KMPanel3.BackgroundImage")));
-            this.KMPanel3.Location = new System.Drawing.Point(54, 134);
-            this.KMPanel3.Name = "KMPanel3";
-            this.KMPanel3.Size = new System.Drawing.Size(675, 350);
-            this.KMPanel3.TabIndex = 0;
-            // 
-            // KMPanel4
-            // 
-            this.KMPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("KMPanel4.BackgroundImage")));
-            this.KMPanel4.Location = new System.Drawing.Point(54, 134);
-            this.KMPanel4.Name = "KMPanel4";
-            this.KMPanel4.Size = new System.Drawing.Size(679, 350);
-            this.KMPanel4.TabIndex = 23;
+            this.KMPanel1.BackgroundImage = global::ProgramKM.Properties.Resources.Ship_1;
+            this.KMPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.KMPanel1.Location = new System.Drawing.Point(54, 137);
+            this.KMPanel1.Name = "KMPanel1";
+            this.KMPanel1.Size = new System.Drawing.Size(676, 350);
+            this.KMPanel1.TabIndex = 0;
+            this.KMPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.KMPanel_Paint);
             // 
             // KMForm
             // 
@@ -327,9 +298,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProgramKM.Properties.Resources.db35qhj_ea72c51d_b0b7_4555_ac33_3592a554fb77;
             this.ClientSize = new System.Drawing.Size(784, 586);
-            this.Controls.Add(this.KMPanel4);
             this.Controls.Add(this.KMPanel1);
-            this.Controls.Add(this.KMPanel3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -340,7 +309,6 @@
             this.Controls.Add(this.TxtLives);
             this.Controls.Add(this.LblLives);
             this.Controls.Add(this.BGLives);
-            this.Controls.Add(this.KMPanel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LblTitle2);
             this.Controls.Add(this.LblTitle);
@@ -369,8 +337,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel KMPanel1;
         private System.Windows.Forms.Label LblTitle;
         private System.Windows.Forms.Label LblTitle2;
         private System.Windows.Forms.Label TxtLevel;
@@ -385,7 +351,6 @@
         private System.Windows.Forms.Timer tmrEnemy;
         private System.Windows.Forms.Timer tmrKrool;
         private System.Windows.Forms.Label lblScore;
-        private System.Windows.Forms.Panel KMPanel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button KMLevel1;
         private System.Windows.Forms.Button KMLevel2;
@@ -394,8 +359,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel KMPanel3;
-        private System.Windows.Forms.Panel KMPanel4;
+        private System.Windows.Forms.Panel KMPanel1;
     }
 }
 

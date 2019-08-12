@@ -11,8 +11,7 @@ namespace ProgramKM
     {
         // declare fields to use in the class
         public int x, y, width, height;//variables for the rectangle
-        public Image enemyImage;//variable for the planet's image
-
+        public Image enemyImage, enemyImage2, enemyImage3, enemyImage4;//variable for the planet's image
         public Rectangle enemyRec;//variable for a rectangle to place our image in
         public int score;
         //Create a constructor (initialises the values of the fields)
@@ -23,6 +22,9 @@ namespace ProgramKM
             width = 40;
             height = 40;
             enemyImage = Image.FromFile("seagull.png");
+            enemyImage2 = Image.FromFile("monkey.png");
+            enemyImage3 = Image.FromFile("rat.png");
+            enemyImage4 = Image.FromFile("yeti.png");
             enemyRec = new Rectangle(x, y, width, height);
         }
         public void drawEnemy(Graphics g)
