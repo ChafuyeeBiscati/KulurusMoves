@@ -19,7 +19,7 @@ namespace ProgramKM
         Kuluru kuluru = new Kuluru();
         bool left, right;//Makes the use of the left and right boolean in the method code
         bool up, down;//Makes the use of the up and down boolean in the method code\
-        int score, lives;
+        int score, lives, level, image;
         string move;
 
         public KMForm()
@@ -116,8 +116,10 @@ namespace ProgramKM
 
         private void KMLevel1_Click(object sender, EventArgs e)
         {
+            image = 1;
+            level = 1;
+            TxtLevel.Text = level.ToString();
             score = 0;
-            
             lblScore.Text = score.ToString();
             lives = int.Parse(TxtLives.Text);// pass lives entered from textbox to lives variable
             KMPanel1.Visible = true;
@@ -129,6 +131,9 @@ namespace ProgramKM
 
         private void KMLevel2_Click(object sender, EventArgs e)
         {
+            image = 2;
+            level = 2;
+            TxtLevel.Text = level.ToString();
             score = 0;
             lblScore.Text = score.ToString();
             lives = int.Parse(TxtLives.Text);// pass lives entered from textbox to lives variable
@@ -141,6 +146,9 @@ namespace ProgramKM
 
         private void KMLevel3_Click(object sender, EventArgs e)
         {
+            image = 3;
+            level = 3;
+            TxtLevel.Text = level.ToString();
             score = 0;
             lblScore.Text = score.ToString();
             lives = int.Parse(TxtLives.Text);// pass lives entered from textbox to lives variable
@@ -153,6 +161,9 @@ namespace ProgramKM
 
         private void KMLevel4_Click(object sender, EventArgs e)
         {
+            image = 4;
+            level = 4;
+            TxtLevel.Text = level.ToString();
             score = 0;
             lblScore.Text = score.ToString();
             lives = int.Parse(TxtLives.Text);// pass lives entered from textbox to lives variable

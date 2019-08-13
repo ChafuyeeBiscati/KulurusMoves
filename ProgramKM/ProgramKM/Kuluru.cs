@@ -28,7 +28,6 @@ namespace ProgramKM
         }
         public void drawKuluru(Graphics g)
         {
-
             g.DrawImage(kuluru, kroolRec);
         }
         public void moveKuluru(string move)
