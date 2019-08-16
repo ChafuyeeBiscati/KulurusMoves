@@ -34,7 +34,6 @@
             this.TxtLevel = new System.Windows.Forms.Label();
             this.LblLives = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TxtLives = new System.Windows.Forms.Label();
             this.BGLives = new System.Windows.Forms.PictureBox();
             this.BGLevel = new System.Windows.Forms.PictureBox();
             this.TxtName = new System.Windows.Forms.TextBox();
@@ -52,6 +51,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.KMPanel1 = new System.Windows.Forms.Panel();
+            this.LivesTxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.LblLives)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BGLives)).BeginInit();
@@ -112,16 +112,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(75, 75);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // TxtLives
-            // 
-            this.TxtLives.AutoSize = true;
-            this.TxtLives.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtLives.Location = new System.Drawing.Point(661, 42);
-            this.TxtLives.Name = "TxtLives";
-            this.TxtLives.Size = new System.Drawing.Size(35, 40);
-            this.TxtLives.TabIndex = 6;
-            this.TxtLives.Text = "0";
             // 
             // BGLives
             // 
@@ -189,7 +179,7 @@
             this.lblScore.AutoSize = true;
             this.lblScore.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(547, 86);
+            this.lblScore.Location = new System.Drawing.Point(545, 86);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(28, 31);
             this.lblScore.TabIndex = 13;
@@ -292,12 +282,22 @@
             this.KMPanel1.TabIndex = 0;
             this.KMPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.KMPanel_Paint);
             // 
+            // LivesTxt
+            // 
+            this.LivesTxt.Font = new System.Drawing.Font("OCR A Extended", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LivesTxt.Location = new System.Drawing.Point(641, 44);
+            this.LivesTxt.Name = "LivesTxt";
+            this.LivesTxt.Size = new System.Drawing.Size(75, 44);
+            this.LivesTxt.TabIndex = 23;
+            this.LivesTxt.TextChanged += new System.EventHandler(this.Txtlives_TextChanged);
+            // 
             // KMForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProgramKM.Properties.Resources.db35qhj_ea72c51d_b0b7_4555_ac33_3592a554fb77;
             this.ClientSize = new System.Drawing.Size(784, 586);
+            this.Controls.Add(this.LivesTxt);
             this.Controls.Add(this.KMPanel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
@@ -306,7 +306,6 @@
             this.Controls.Add(this.DspScore);
             this.Controls.Add(this.TxtName);
             this.Controls.Add(this.DspName);
-            this.Controls.Add(this.TxtLives);
             this.Controls.Add(this.LblLives);
             this.Controls.Add(this.BGLives);
             this.Controls.Add(this.label1);
@@ -342,7 +341,6 @@
         private System.Windows.Forms.Label TxtLevel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox LblLives;
-        private System.Windows.Forms.Label TxtLives;
         private System.Windows.Forms.PictureBox BGLives;
         private System.Windows.Forms.PictureBox BGLevel;
         private System.Windows.Forms.TextBox TxtName;
@@ -360,6 +358,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel KMPanel1;
+        private System.Windows.Forms.TextBox LivesTxt;
     }
 }
 

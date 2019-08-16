@@ -14,7 +14,8 @@ namespace ProgramKM
         public Image enemyImage, enemyImage2, enemyImage3, enemyImage4;//variable for the planet's image
         public Rectangle enemyRec;//variable for a rectangle to place our image in
         public int score;
-        public int level;
+        public int level = 3;
+        public bool one, two, three, four;
         //Create a constructor (initialises the values of the fields)
         public Enemy(int spacing)
         {
@@ -23,30 +24,30 @@ namespace ProgramKM
             width = 40;
             height = 40;
             enemyImage = Image.FromFile("seagull.png");
-            enemyImage2 = Image.FromFile("seagull.png");
-            enemyImage3 = Image.FromFile("seagull.png");
-            enemyImage4 = Image.FromFile("seagull.png");
+            enemyImage2 = Image.FromFile("Monkey.png");
+            enemyImage3 = Image.FromFile("slime.jpg");
+            enemyImage4 = Image.FromFile("yeti.gif");
             enemyRec = new Rectangle(x, y, width, height);
 
         }
         public void drawEnemy(Graphics g)
         {
-           if (level == 1)
+           if (one == true)
             {
                 g.DrawImage(enemyImage, enemyRec);
               
             }
-            if (level == 2)
+            if (two == true)
             {
                 g.DrawImage(enemyImage2, enemyRec);
                 
             }
-            if (level == 3)
+            if (three == true)
             {
                 g.DrawImage(enemyImage3, enemyRec);
                
             }
-            if (level == 4)
+            if (four == true)
             {
                 g.DrawImage(enemyImage4, enemyRec);
              
@@ -56,11 +57,11 @@ namespace ProgramKM
         public void moveEnemy()
         {
             enemyRec.Location = new Point(x, y);
-            if (enemyRec.Location.X > 650)
+            if (enemyRec.Location.X > 675)
             {
-                x = 20;
-                enemyRec.Location = new Point(x, y);
                 score += 1;// add 1 to score when planet reaches bottom of panel
+                x = 0;
+                enemyRec.Location = new Point(x, y);
             }
 
         }

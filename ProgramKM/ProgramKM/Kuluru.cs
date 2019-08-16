@@ -66,26 +66,26 @@ namespace ProgramKM
 
                 if (move == "up")
                 {
-                    if (kroolRec.Location.Y < 0) // is spaceship within 10 of left side
+                    if (kroolRec.Location.Y < 10) // is spaceship within 10 of left side
                     {
-                        y = 0;
+                        y = 10;
                         kroolRec.Location = new Point(x, y);
                     }
                     else
                     {
-                        y += 5;
+                        y -= 5;
                         kroolRec.Location = new Point(x, y);
                     }
                 if (move == "down")
                     {
-                        if (kroolRec.Location.Y < 325) // is spaceship within 10 of left side
+                        if (kroolRec.Location.Y > 325) // is spaceship within 10 of left side
                         {
                             y = 325;
                             kroolRec.Location = new Point(x, y);
                         }
                         else
                         {
-                            y -= 5;
+                            y += 5;
                             kroolRec.Location = new Point(x, y);
                         }
 
