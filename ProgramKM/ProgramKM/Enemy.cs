@@ -14,13 +14,13 @@ namespace ProgramKM
         public Image enemyImage, enemyImage2, enemyImage3, enemyImage4;//variable for the planet's image
         public Rectangle enemyRec;//variable for a rectangle to place our image in
         public int score;
-        public int level = 3;
-        public bool one, two, three, four;
+        public int level;
         //Create a constructor (initialises the values of the fields)
-        public Enemy(int spacing)
+        public Enemy(int spacing,int level_selected)
         {
             x = 10;
             y = spacing;
+            level = level_selected;
             width = 40;
             height = 40;
             enemyImage = Image.FromFile("seagull.png");
@@ -32,22 +32,22 @@ namespace ProgramKM
         }
         public void drawEnemy(Graphics g)
         {
-           if (one == true)
+           if (level == 1)
             {
                 g.DrawImage(enemyImage, enemyRec);
               
             }
-            if (two == true)
+            if (level ==2)
             {
                 g.DrawImage(enemyImage2, enemyRec);
                 
             }
-            if (three == true)
+            if (level == 3)
             {
                 g.DrawImage(enemyImage3, enemyRec);
                
             }
-            if (four == true)
+            if (level == 4)
             {
                 g.DrawImage(enemyImage4, enemyRec);
              

@@ -20,11 +20,7 @@ namespace ProgramKM
         bool left, right;//Makes the use of the left and right boolean in the method code
         bool up, down;//Makes the use of the up and down boolean in the method code\
         int score, lives;
-        bool one;
-        bool two;
-        bool three;
-        bool four;
-        int level = 1;
+        int level;
         string move;
 
         public KMForm()
@@ -34,17 +30,13 @@ namespace ProgramKM
             for (int i = 0; i < 7; i++)
             {
                 int y = 10 + (i * 50);
-                enemy[i] = new Enemy(y);
+                enemy[i] = new Enemy(y,level);
             }
 
         }
 
         private void KMForm_Load(object sender, EventArgs e)
         {
-            one = false;
-            two = false;
-            three = false;
-            four = false;
             KMPanel1.Visible = false;
             TxtName.Focus();
             tmrEnemy.Enabled = false;
@@ -90,12 +82,12 @@ namespace ProgramKM
                 move = "left";
                 kuluru.moveKuluru(move);
             }
-            if (up) // if right arrow key pressed
+            if (up) // if up arrow key pressed
             {
                 move = "up";
                 kuluru.moveKuluru(move);
             }
-            if (down) // if left arrow key pressed
+            if (down) // if down arrow key pressed
             {
                 move = "down";
                 kuluru.moveKuluru(move);
@@ -120,6 +112,7 @@ namespace ProgramKM
 
         private void KMLevel1_Click(object sender, EventArgs e)
         {
+            level = 1;
             lives = int.Parse(LivesTxt.Text);// pass lives entered from textbox to lives variable
             if (lives <= 0)
             {
@@ -144,6 +137,7 @@ namespace ProgramKM
 
         private void KMLevel2_Click(object sender, EventArgs e)
         {
+            level = 2;
             lives = int.Parse(LivesTxt.Text);// pass lives entered from textbox to lives variable
             if (lives <= 0)
             {
@@ -154,7 +148,6 @@ namespace ProgramKM
             }
             if (lives > 0)
             {
-            level = 2;
             TxtLevel.Text = level.ToString();
             score = 0;
             lblScore.Text = score.ToString();
@@ -253,12 +246,12 @@ namespace ProgramKM
                     checkLives();
                 }
 
-
+                KMPanel1.Invalidate();//makes the paint event fire to redraw the panel
                 score += enemy[i].score;// get score from Planet class (in movePlanet method)
                 lblScore.Text = score.ToString();// display score
 
             }
-            KMPanel1.Invalidate();//makes the paint event fire to redraw the panel
+            //KMPanel1.Invalidate();//makes the paint event fire to redraw the panel
 
         }
         private void checkLives()
