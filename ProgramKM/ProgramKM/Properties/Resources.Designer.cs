@@ -19,7 +19,7 @@ namespace ProgramKM.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -66,6 +66,66 @@ namespace ProgramKM.Properties {
         internal static System.Drawing.Bitmap db35qhj_ea72c51d_b0b7_4555_ac33_3592a554fb77 {
             get {
                 object obj = ResourceManager.GetObject("db35qhj-ea72c51d-b0b7-4555-ac33-3592a554fb77", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KMLevel {
+            get {
+                object obj = ResourceManager.GetObject("KMLevel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KMLevel2 {
+            get {
+                object obj = ResourceManager.GetObject("KMLevel2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KMLevel21 {
+            get {
+                object obj = ResourceManager.GetObject("KMLevel21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KMLevel3 {
+            get {
+                object obj = ResourceManager.GetObject("KMLevel3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KMLevel4 {
+            get {
+                object obj = ResourceManager.GetObject("KMLevel4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap KMLevel5 {
+            get {
+                object obj = ResourceManager.GetObject("KMLevel5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

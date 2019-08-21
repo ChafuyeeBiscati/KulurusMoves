@@ -93,5 +93,20 @@
   <ItemGroup>
     <None Include="Resources\db35qhj-ea72c51d-b0b7-4555-ac33-3592a554fb77.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\KMLevel5.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\KMLevel4.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\KMLevel3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\KMLevel2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\KMLevel.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

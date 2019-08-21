@@ -62,7 +62,7 @@ namespace ProgramKM
                     x -= 5;
                     kroolRec.Location = new Point(x, y);
                 }
-
+            }
                 if (move == "up")
                 {
                     if (kroolRec.Location.Y < 0)
@@ -78,9 +78,9 @@ namespace ProgramKM
                 }
                 if (move == "down")
                 {
-                    if (kroolRec.Location.Y > 350)
+                    if (kroolRec.Location.Y > 300)
                     {
-                        y = 350;
+                        y = 300;
                         kroolRec.Location = new Point(x, y);
                     }
                     else
@@ -90,7 +90,7 @@ namespace ProgramKM
                     }
                 }
 
-            }
+            
             }
 }
 }
