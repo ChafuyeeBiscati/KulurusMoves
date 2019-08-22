@@ -43,6 +43,7 @@ namespace ProgramKM
 
         private void KMForm_Load(object sender, EventArgs e)
         {
+            //Disable the buttons for isletter
             KMLevel1.Enabled = false;
             KMLevel2.Enabled = false;
             KMLevel3.Enabled = false;
