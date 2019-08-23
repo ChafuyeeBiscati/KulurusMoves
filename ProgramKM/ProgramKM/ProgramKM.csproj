@@ -108,5 +108,11 @@
   <ItemGroup>
     <None Include="bin\Debug\KMLevel.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\playbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\stopbutton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

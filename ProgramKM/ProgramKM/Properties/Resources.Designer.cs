@@ -143,6 +143,26 @@ namespace ProgramKM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap playbutton {
+            get {
+                object obj = ResourceManager.GetObject("playbutton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap playbutton1 {
+            get {
+                object obj = ResourceManager.GetObject("playbutton1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ship_1 {
             get {
                 object obj = ResourceManager.GetObject("Ship_1", resourceCulture);
@@ -156,6 +176,16 @@ namespace ProgramKM.Properties {
         internal static System.Drawing.Bitmap Stone_1 {
             get {
                 object obj = ResourceManager.GetObject("Stone_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stopbutton {
+            get {
+                object obj = ResourceManager.GetObject("stopbutton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

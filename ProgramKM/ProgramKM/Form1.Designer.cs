@@ -109,6 +109,7 @@
             this.LblLives.Size = new System.Drawing.Size(75, 75);
             this.LblLives.TabIndex = 4;
             this.LblLives.TabStop = false;
+            this.LblLives.Click += new System.EventHandler(this.LblLives_Click);
             // 
             // pictureBox1
             // 
@@ -186,7 +187,7 @@
             this.lblScore.AutoSize = true;
             this.lblScore.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(545, 86);
+            this.lblScore.Location = new System.Drawing.Point(547, 86);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(28, 31);
             this.lblScore.TabIndex = 13;
@@ -272,11 +273,12 @@
             // 
             this.KMLevel1.BackgroundImage = global::ProgramKM.Properties.Resources.KMLevel;
             this.KMLevel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.KMLevel1.Location = new System.Drawing.Point(121, 137);
+            this.KMLevel1.Location = new System.Drawing.Point(121, 138);
             this.KMLevel1.Name = "KMLevel1";
             this.KMLevel1.Size = new System.Drawing.Size(541, 49);
             this.KMLevel1.TabIndex = 25;
             this.KMLevel1.UseVisualStyleBackColor = true;
+            this.KMLevel1.Click += new System.EventHandler(this.KMLevel1_Click_1);
             // 
             // KMLevel5
             // 
